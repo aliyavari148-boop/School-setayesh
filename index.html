@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مدرسه ستایش | متوسطه دوم آموزش از راه دور</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f7f9fc;
+            color: #333;
+            line-height: 1.9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a5acd, #8e7be8);
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(rgba(76, 61, 140, 0.78),
+                rgba(76, 61, 140, 0.78)),
+                url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 23px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: white;
+            color: #6252bd;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        section {
+            padding: 60px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #5d4db5;
+            font-size: 28px;
+            margin-bottom: 35px;
+        }
+
+        .welcome {
+            background: white;
+            max-width: 900px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .welcome p {
+            font-size: 17px;
+            color: #555;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #5d4db5;
+            margin-bottom: 10px;
+        }
+
+        .about {
+            background: #eeeafd;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .contact {
+            background: white;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-item {
+            background: #f5f3ff;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #5d4db5;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #393252;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- سربرگ -->
+    <header>
+        <div class="logo">
+            مدرسه ستایش
+        </div>
+
+        <nav>
+            <a href="#home">خانه</a>
+            <a href="#welcome">خوشامدگویی</a>
+            <a href="#about">درباره مدرسه</a>
+            <a href="#services">امکانات</a>
+            <a href="#contact">ارتباط با ما</a>
+        </nav>
+    </header>
+
+
+    <!-- بخش اصلی -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>مدرسه ستایش</h1>
+
+            <h2>
+                متوسطه دوم آموزش از راه دور دخترانه
+            </h2>
+
+            <p>
+                فضایی برای یادگیری، رشد و ساختن آینده‌ای روشن
+            </p>
+
+            <a href="#welcome" class="button">
+                ورود به مدرسه
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- پیام خوشامدگویی -->
+    <section id="welcome">
+
+        <h2 class="section-title">
+            پیام خوشامدگویی
+        </h2>
+
+        <div class="welcome">
+
+            <p>
+                🌷 به وب‌سایت رسمی مدرسه ستایش خوش آمدید 🌷
+            </p>
+
+            <br>
+
+            <p>
+                حضور شما را در مدرسه دخترانه ستایش، متوسطه دوم آموزش از راه دور،
+                گرامی می‌داریم.
+            </p>
+
+            <p>
+                مدرسه ستایش تلاش می‌کند با فراهم کردن محیطی مناسب برای آموزش،
+                فرصت رشد و پیشرفت را برای دانش‌آموزان عزیز فراهم کند.
+            </p>
+
+            <p>
+                امیدواریم این وب‌سایت بتواند راه ارتباطی مناسبی میان مدرسه،
+                دانش‌آموزان و خانواده‌های گرامی باشد.
+            </p>
+
+            <br>
+
+            <strong>
+                برای شما دانش‌آموزان عزیز، آینده‌ای روشن و سرشار از موفقیت آرزو داریم. 🌱
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- امکانات -->
+    <section id="services">
+
+        <h2 class="section-title">
+            امکانات و خدمات مدرسه
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">📚</div>
+                <h3>آموزش از راه دور</h3>
+                <p>
+                    امکان ادامه تحصیل با شیوه آموزش از راه دور
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎓</div>
+                <h3>متوسطه دوم</h3>
+                <p>
+                    ارائه خدمات آموزشی برای دوره متوسطه دوم
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👩‍🎓</div>
+                <h3>مدرسه دخترانه</h3>
+                <p>
+                    محیط آموزشی ویژه دختران دانش‌آموز
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>خدمات آنلاین</h3>
+                <p>
+                    دسترسی آسان به اطلاعات و خدمات مدرسه
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- درباره مدرسه -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">
+            درباره مدرسه ستایش
+        </h2>
+
+        <div class="about-content">
+
+            <p>
+                مدرسه ستایش یک مجموعه آموزشی دخترانه در مقطع متوسطه دوم
+                آموزش از راه دور در شهر قم است.
+            </p>
+
+            <p>
+                هدف ما فراهم کردن بستری مناسب برای ادامه تحصیل،
+                رشد علمی و پرورش استعدادهای دانش‌آموزان عزیز است.
+            </p>
+
+            <p>
+                ما باور داریم که هر دانش‌آموز می‌تواند مسیر موفقیت خود را
+                با تلاش، پشتکار و دریافت آموزش مناسب بسازد.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- تماس -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">
+            ارتباط با مدرسه
+        </h2>
+
+        <div class="contact-box">
+
+            <div class="contact-item">
+                <strong>📍 نشانی</strong>
+                قم، ................................
+            </div>
+
+            <div class="contact-item">
+                <strong>📞 تلفن</strong>
+                ۰۲۵-........................
+            </div>
+
+            <div class="contact-item">
+                <strong>✉️ ایمیل</strong>
+                info@example.com
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- فوتر -->
+    <footer>
+
+        <p>
+            © تمامی حقوق برای مدرسه ستایش محفوظ است.
+        </p>
+
+        <p>
+            متوسطه دوم آموزش از راه دور دخترانه | شهر قم
+        </p>
+
+    </footer>
+
+</body>
+  </html>
